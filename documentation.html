@@ -10,8 +10,8 @@
 	</head>
 	<body>
         <header>
-            <div style="width:800px; margin: auto; margin-top:25px;">
-              <h2>Prasanna’s - Recreating Dr. John Snow's map using d3</h2>
+            <div class="header">
+              <h3>Documentation</h3>
             </div>
             <div>
                 <div style="margin-left: 1100px;">
@@ -22,50 +22,47 @@
         </header>
 		<br>
 		<div style="margin: 35px">
+			<h4>Team Members: Prasanna Kumar Mandapati, Sagar Varma Samanthapudi</h4>
+			<h4>Advisor: Dr. Khairi Rheda</h4>
 			<h4>Introduction:</h4>
-			<p>In nineteenth century, Cholera was a significant worldwide scourge with successive huge scope plagues in European nations. Somewhere in the range of 1848 and 1854, a progression of cholera flare-ups happened in London with enormous scope death toll. One pandemic of cholera happened around Broad (presently Broad wick Street) Street, Golden Square, in Soho, area of focal London with unhygienic businesses and lodging. Dr. Snow, an obstetrician with a premium in numerous parts of clinical science, directed spearheading examinations on cholera pestilences in which he showed that sullied water was the key source causing the illness. His exhaustive examination of a plague prompted his decision that defiled water from the Broad Street siphon was the wellspring of the sickness and, thusly, the expulsion of the handle prompted discontinuance of the pestilence. He further explored about Cholera that they were getting water from two water supply frameworks and one from the sewage debased piece of the Thames River and the other that drew its water upstream from an uncontaminated piece of the stream. He drew a guide of London, of Water-dispersed frameworks, he analyzed cholera cases among customers of water of two providers relying on their water consumption. Paces of disease among clients of the appropriation framework drawing debased water far surpassed the rates among those served by the organization whose water admission was from over the polluted part of the stream. This exhibit built up the objectives of the sterilization development, which created sewage waste frameworks and water refinement frameworks in urban communities and towns in the next many years, this brought about decline in cholera as well as different infections.</p>
-			<h4>Design for Cholera Map Visualization:</h4>
-            <div style="margin-left: 30px">
-                <ul>
-                    <li style="margin-left: ;">In this project, Firstly, I have gone through the requirements of the project and gonethrough the the given datasets i.e. streets, pumps, deathdays and deathagessex files.</li>
-                    <li>Next I made a analysis on how to draw all the graphs and how to start it. Took a overlook on the John Snow's map.</li>
-                    <li>I used Visualization studio code and started uploading the packages and files. First I took the streets.json file and plotted the lines and displayed pumps from the pumps file, and plotted the deaths based on the gender and coordinates as given in the deaths_age_sex file, followed by streets names, warehouses and brewery.</li>
-                    <li>By hovering on the timeline graph, we can see the number of deaths occurred on the particular dates on the map.</li>
-                    <li>The first pie-chart shows the no. of deaths by age group. You can see the age groups, death percentage and number of deaths.</li>
-                    <li>The second pie-chart shows the number of deaths by sex i.e., Male and Female.</li>
-                    <li>Then analyzed the valuable information from datasets.</li>
-                </ul>
-            </div>
-			<img src="image.jpeg" alt="Fig: Designfig1" style="width: 500px;height: 450px;">
-			<h4>Design Choices:</h4>
-			<ul>
-				<p>In the beginning, I started doing sketches on the paper for the visualization by taking the datasets and their measures into consideration. There are correlations of the datasets. After understanding the datasets and their data, I tried to present my data in such a way that a person can easily lead a investigation on the cholera epidemic. Initial Visualization has a map, which has streets and pumps, locations of the deaths. I have used pie chart and timeline graph to analyze the correct amount of the deaths occurred in that area. You can also see the number of deaths occurred on a specific date. The brown color represents the London streets and yellow color represents the pumps in that area. Also mentioned age groups in different colors. I’ve also added Zoom-in and Zoom-out functions to the map. For the other pie chart, I have used two colors Maroon and Purple for Male and Female respectively.</p>
-			</ul>
-			<h4>Observations:</h4>
-			<ul>
-				<p>By observing the map, we can see that females are more affected than the male. By hovering on the first pie chart, user can be able to see the number of deaths by age group. we can see in the visualization that age group from 0 to 10 and age group greater than >80 is more affected by this incident than other age groups.
-					Third, Timeline Graph which shows the death dates and number of the deaths occurred on that date. You can observe high death rate occurred in between 9th August and 10th September. Also, the highest death occurred is on 1st September.
-					Then I have added the pie-charts where the user can have a clear percentage of deaths by Age group and Sex.
-					</p>
-			</ul>
-      <h4> Framework & Tools:</h4>
-      <li style="margin-left: ;">D3.js</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>javascript</li>
+			<p>While brainstorming the ideas for the current business problems and landed up, Covid-19 pandemic has affected the airline sector immensely. To gain the business 
+				and grow back to its potential growth post the pandemic. It must tackle and decline its flight delay rate 
+				to gain the market capital. So, we have decided to Visualize the flights, delay data interactively which 
+				includes delay timelines for each flight among the cities in USA by the major airlines.  </p>
+			<h4>Dataset:</h4>
+                <p> We are extracted the data from https://www.kaggle.com/datasets/flight-delay-and-causes-2019 which contains DayOfWeek - (Monday-Sunday),Date → Scheduled dateDepTime → Actual departure time (local, hhmm),ArrTime → Actual arrival time (local, hhmm),CRSArrTime → Scheduled arrival time (local, hhmm),UniqueCarrier → Unique carrier code,Airline → Airline company,FlightNum → flight number,TailNum → plane tail number,ActualElapsedTime → Actual time an airplane spends in the air(in minutes) with TaxiIn/Out,CRSElapsedTime → CRS Elapsed Time of Flight (estimated elapse time) in minutes,AirTime → Flight Time (in minutes),ArrDelay → Difference in minutes between scheduled and actual arrival time,Origin → Origin IATA(International Air Transport Association) airport code,Org_Airport → Origin Airport Name,Dest → Destination IATA code,Dest_Airport → Destination Airport Name,Distance → Distance between airports (miles),TaxiIn → Wheels down and arrival at the destination airport gate, in minutes,TaxiOut → The time elapsed between departure from the origin airport gate and wheels off, in minutes,Cancelled → Was the flight canceled?,CancellationCode → Reason for cancellation,Diverted → 1 = yes, 0 = no,CarrierDelay → Flight delay due to carrier(e.g. maintenance or crew problems, aircraft cleaning, fueling, etc), 0 = No, yes = (in minutes),WeatherDelay → Flight delay due to weather, 0 = No, yes = (in minutes),NASDelay → Flight delay by NSA(National Aviation System), 0 = No, yes = (in minutes),SecurityDelay → Flight delay by this reason, 0 = No, yes = (in minutes),LateAircraftDelay → Flight delay by this reason, 0 = No, yes = (in minutes)</p>
+				<p>Number of rows: 484552
+					Of all these available columns, we used the most important features that contribute most to the delay of flight insights like Departure Time, Arrival Time, Origin Airport, Destination Airport, Delay Count, Total Number of Delays, DaysofWeek, Month.</p>
+			<h4>Approach:</h4>
+				<p>AIMS approach to break the problem statement and define data</p>
+			<h4>Exploratory Data Analysis:</h4>
+				<p>Initially we explored the dataset by performing exploratory data analysis in python and understood the distribution of the dataset by plotting few bar plots and pie charts.
+				Later on, some data cleaning in removal of outliers and removal of null values and replacing it with most occuring value.</p>
+			<h4>Dashboard Design:</h4>
+				<p>As the data set is very immense, we had done some initial analysis and listed out the use cases that our visualizations should be providing deep insights with an automated dashboard providing quick and latest sales insights inorder to support data driven decision making.</p>
+			<h4>Initial Ideas:</h4>
+			<img src="img6.jpeg" alt="Fig: Designfig1" style="width: 500px;height: 450px;">
+			<h4> Framework & Tools:</h4>
+				<li style="margin-left: ;">Microsoft Power BI</li>
+				<li>HTML</li>
+				<li>CSS</li>
+			<h4>Output:</h4>
+					<h4>Below are the developed visualizations that answered several questions related to major reasons for the delay in flights.</h4>
+					<img src="img1.png" alt="Fig: Designfig1" style="width: 350px;height: 300x;">
+					<h4>This illustrates the pattern of the flight delay rate for each day in year of 2019 on month on month basis, We can understand in the month of January and March had most delay rates.</h4>
+					<img src="img2.png" alt="Fig: Designfig1" style="width: 350px;height: 300px;">
+					<h4>Above pie chart depicts that friday has the most percentage of delays in the week.</h4>
+					<img src="img3.png" alt="Fig: Designfig1" style="width: 350px;height: 300px;">
+					<h4>The routes with the delay and the major reason of delays that caused the delay for the connection flight by region is visuallized and that provides insights to handle those issues on priority.</h4>
+					<img src="img4.png" alt="Fig: Designfig1" style="width: 350px;height: 300px;">
+					<h4>With the bar graph it illustrated the highest count of flight delays by a airline and South west airlines had the most count of flight delays.</h4>
+					<img src="img5.png" alt="Fig: Designfig1" style="width: 350px;height: 300px;">
+					<h4>The above bar chart depicts the average total delay time by an airline which provides the insights saying that Skywest being top delayed airlines with an average delay for the flight of 63 minutes.</h4>
 			<h4>References:</h4>
 			<div style="margin-left: 30px">
 				<ul>
-					<li><a href="https://www.w3schools.com/graphics/svg_intro.asp">https://www.w3schools.com/graphics/svg_intro.asp</a></li>
-					<li><a href="https://www.w3schools.com/w3js/">https://www.w3schools.com/w3js/</a></li>
-					<li><a href="https://www.w3schools.com/w3css/">https://www.w3schools.com/w3css/</a></li>
-					<li><a href="https://www.toptal.com/designers/colorfilter">https://www.toptal.com/designers/colorfilter</a></li>
-					<li><a href="https://codepen.io/rstrahl/pen/yyEYBx.">https://codepen.io/rstrahl/pen/yyEYBx.</a></li>
-					<li><a href="https://www.udemy.com/data-visualize-data-with-d3js-the-easy-way/learn/v4/overview">https://www.udemy.com/data-visualize-data-with-d3js-the-easy-way/learn/v4/overview</a></li>
-					<li><a href="https://webdva.github.io/how-to-draw-a-line-in-d3js">https://webdva.github.io/how-to-draw-a-line-in-d3js</a></li>
-					<li><a href="https://d3js.org">https://d3js.org</a></li>
-					<li><a href="https://www.d3-graph-gallery.com">https://www.d3-graph-gallery.com</a></li>
-					<li><a href="https://gist.github.com/bryanhanson/11344247">https://gist.github.com/bryanhanson/11344247</a></li>
+					<li><a href="https://www.kaggle.com/datasets/undersc0re/flight-delay-and-causes">"https://www.kaggle.com/datasets/undersc0re/flight-delay-and-causes"</a></li>
+					<li><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-report-create-new"> https://docs.microsoft.com/en-us/power-bi/create-reports/service-report-create-new</a></li>
 				</ul>
 			</div>	
 		</div>
